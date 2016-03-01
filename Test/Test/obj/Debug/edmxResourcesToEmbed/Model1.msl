@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="icshopc_icshopcModelStoreContainer" CdmEntityContainer="icshopc_icshopcEntities">
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="icshopc_icshopcModel.products">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="products_id" ColumnName="products_id" />
+          <ScalarProperty Name="products_quantity" ColumnName="products_quantity" />
+          <ScalarProperty Name="products_shippingtime" ColumnName="products_shippingtime" />
+          <ScalarProperty Name="products_model" ColumnName="products_model" />
+          <ScalarProperty Name="group_ids" ColumnName="group_ids" />
+          <ScalarProperty Name="products_sort" ColumnName="products_sort" />
+          <ScalarProperty Name="products_image" ColumnName="products_image" />
+          <ScalarProperty Name="products_price" ColumnName="products_price" />
+          <ScalarProperty Name="products_discount_allowed" ColumnName="products_discount_allowed" />
+          <ScalarProperty Name="products_date_added" ColumnName="products_date_added" />
+          <ScalarProperty Name="products_last_modified" ColumnName="products_last_modified" />
+          <ScalarProperty Name="products_date_available" ColumnName="products_date_available" />
+          <ScalarProperty Name="products_weight" ColumnName="products_weight" />
+          <ScalarProperty Name="products_status" ColumnName="products_status" />
+          <ScalarProperty Name="products_tax_class_id" ColumnName="products_tax_class_id" />
+          <ScalarProperty Name="product_template" ColumnName="product_template" />
+          <ScalarProperty Name="options_template" ColumnName="options_template" />
+          <ScalarProperty Name="manufacturers_id" ColumnName="manufacturers_id" />
+          <ScalarProperty Name="products_ordered" ColumnName="products_ordered" />
+          <ScalarProperty Name="products_fsk18" ColumnName="products_fsk18" />
+          <ScalarProperty Name="products_featured" ColumnName="products_featured" />
+          <ScalarProperty Name="products_stock_code" ColumnName="products_stock_code" />
+          <ScalarProperty Name="products_storage_spaces" ColumnName="products_storage_spaces" />
+          <ScalarProperty Name="products_transport" ColumnName="products_transport" />
+          <ScalarProperty Name="products_country" ColumnName="products_country" />
+          <ScalarProperty Name="epass_price" ColumnName="epass_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products_description">
+      <EntityTypeMapping TypeName="icshopc_icshopcModel.products_description">
+        <MappingFragment StoreEntitySet="products_description">
+          <ScalarProperty Name="products_id" ColumnName="products_id" />
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+          <ScalarProperty Name="products_name" ColumnName="products_name" />
+          <ScalarProperty Name="products_description1" ColumnName="products_description" />
+          <ScalarProperty Name="products_short_description" ColumnName="products_short_description" />
+          <ScalarProperty Name="products_meta_title" ColumnName="products_meta_title" />
+          <ScalarProperty Name="products_meta_description" ColumnName="products_meta_description" />
+          <ScalarProperty Name="products_meta_keywords" ColumnName="products_meta_keywords" />
+          <ScalarProperty Name="products_url" ColumnName="products_url" />
+          <ScalarProperty Name="products_viewed" ColumnName="products_viewed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories_description">
+      <EntityTypeMapping TypeName="icshopc_icshopcModel.categories_description">
+        <MappingFragment StoreEntitySet="categories_description">
+          <ScalarProperty Name="categories_meta_keywords" ColumnName="categories_meta_keywords" />
+          <ScalarProperty Name="categories_meta_description" ColumnName="categories_meta_description" />
+          <ScalarProperty Name="categories_meta_title" ColumnName="categories_meta_title" />
+          <ScalarProperty Name="categories_description1" ColumnName="categories_description" />
+          <ScalarProperty Name="categories_heading_title" ColumnName="categories_heading_title" />
+          <ScalarProperty Name="categories_name" ColumnName="categories_name" />
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+          <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products_to_categories">
+      <EntityTypeMapping TypeName="icshopc_icshopcModel.products_to_categories">
+        <MappingFragment StoreEntitySet="products_to_categories">
+          <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+          <ScalarProperty Name="products_id" ColumnName="products_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shipping_status">
+      <EntityTypeMapping TypeName="icshopc_icshopcModel.shipping_status">
+        <MappingFragment StoreEntitySet="shipping_status">
+          <ScalarProperty Name="shipping_status_image" ColumnName="shipping_status_image" />
+          <ScalarProperty Name="shipping_status_name" ColumnName="shipping_status_name" />
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+          <ScalarProperty Name="shipping_status_id" ColumnName="shipping_status_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="icshopc_icshopcModel.categories">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="products_sorting2" ColumnName="products_sorting2" />
+          <ScalarProperty Name="products_sorting" ColumnName="products_sorting" />
+          <ScalarProperty Name="sort_order" ColumnName="sort_order" />
+          <ScalarProperty Name="listing_template" ColumnName="listing_template" />
+          <ScalarProperty Name="group_ids" ColumnName="group_ids" />
+          <ScalarProperty Name="categories_template" ColumnName="categories_template" />
+          <ScalarProperty Name="categories_status" ColumnName="categories_status" />
+          <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+          <ScalarProperty Name="categories_image" ColumnName="categories_image" />
+          <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="icshopc_icshopcModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="categories">
+          <Key>
+            <PropertyRef Name="categories_id" />
+          </Key>
+          <Property Name="categories_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categories_image" Type="varchar" MaxLength="64" />
+          <Property Name="parent_id" Type="int" Nullable="false" />
+          <Property Name="categories_status" Type="bool" Nullable="false" />
+          <Property Name="categories_template" Type="varchar" MaxLength="64" />
+          <Property Name="group_ids" Type="text" />
+          <Property Name="listing_template" Type="varchar" MaxLength="64" />
+          <Property Name="sort_order" Type="int" />
+          <Property Name="products_sorting" Type="varchar" MaxLength="32" />
+          <Property Name="products_sorting2" Type="varchar" MaxLength="32" />
+          <Property Name="date_added" Type="datetime" Precision="0" />
+          <Property Name="last_modified" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="categories_description">
+          <Key>
+            <PropertyRef Name="categories_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="categories_id" Type="int" Nullable="false" />
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="categories_name" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="categories_heading_title" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="categories_description" Type="text" Nullable="false" />
+          <Property Name="categories_meta_title" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="categories_meta_description" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="categories_meta_keywords" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="products">
+          <Key>
+            <PropertyRef Name="products_id" />
+          </Key>
+          <Property Name="products_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="products_quantity" Type="int" Nullable="false" />
+          <Property Name="products_shippingtime" Type="int" Nullable="false" />
+          <Property Name="products_model" Type="varchar" MaxLength="64" />
+          <Property Name="group_ids" Type="text" />
+          <Property Name="products_sort" Type="int" />
+          <Property Name="products_image" Type="varchar" MaxLength="64" />
+          <Property Name="products_price" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+          <Property Name="products_discount_allowed" Type="decimal" Precision="3" Scale="2" Nullable="false" />
+          <Property Name="products_date_added" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="products_last_modified" Type="datetime" Precision="0" />
+          <Property Name="products_date_available" Type="datetime" Precision="0" />
+          <Property Name="products_weight" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="products_status" Type="bool" Nullable="false" />
+          <Property Name="products_tax_class_id" Type="int" Nullable="false" />
+          <Property Name="product_template" Type="varchar" MaxLength="64" />
+          <Property Name="options_template" Type="varchar" MaxLength="64" />
+          <Property Name="manufacturers_id" Type="int" />
+          <Property Name="products_ordered" Type="int" Nullable="false" />
+          <Property Name="products_fsk18" Type="int" Nullable="false" />
+          <Property Name="products_featured" Type="int" Nullable="false" />
+          <Property Name="products_stock_code" Type="varchar" MaxLength="32" />
+          <Property Name="products_storage_spaces" Type="varchar" MaxLength="30" />
+          <Property Name="products_transport" Type="varchar" MaxLength="15" />
+          <Property Name="products_country" Type="varchar" MaxLength="15" />
+          <Property Name="epass_price" Type="decimal" Precision="15" Scale="0" />
+        </EntityType>
+        <EntityType Name="products_description">
+          <Key>
+            <PropertyRef Name="products_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="products_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="products_name" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="products_description" Type="text" />
+          <Property Name="products_short_description" Type="text" />
+          <Property Name="products_meta_title" Type="text" Nullable="false" />
+          <Property Name="products_meta_description" Type="text" Nullable="false" />
+          <Property Name="products_meta_keywords" Type="text" Nullable="false" />
+          <Property Name="products_url" Type="varchar" MaxLength="255" />
+          <Property Name="products_viewed" Type="int" />
+        </EntityType>
+        <EntityType Name="products_to_categories">
+          <Key>
+            <PropertyRef Name="products_id" />
+            <PropertyRef Name="categories_id" />
+          </Key>
+          <Property Name="products_id" Type="int" Nullable="false" />
+          <Property Name="categories_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="shipping_status">
+          <Key>
+            <PropertyRef Name="shipping_status_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="shipping_status_id" Type="int" Nullable="false" />
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="shipping_status_name" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="shipping_status_image" Type="varchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="icshopc_icshopcModelStoreContainer">
+          <EntitySet Name="categories" EntityType="Self.categories" Schema="icshopc_icshopc" store:Type="Tables" />
+          <EntitySet Name="categories_description" EntityType="Self.categories_description" Schema="icshopc_icshopc" store:Type="Tables" />
+          <EntitySet Name="products" EntityType="Self.products" Schema="icshopc_icshopc" store:Type="Tables" />
+          <EntitySet Name="products_description" EntityType="Self.products_description" Schema="icshopc_icshopc" store:Type="Tables" />
+          <EntitySet Name="products_to_categories" EntityType="Self.products_to_categories" Schema="icshopc_icshopc" store:Type="Tables" />
+          <EntitySet Name="shipping_status" EntityType="Self.shipping_status" Schema="icshopc_icshopc" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="icshopc_icshopcModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="products">
+          <Key>
+            <PropertyRef Name="products_id" />
+          </Key>
+          <Property Name="products_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="products_quantity" Type="Int32" Nullable="false" />
+          <Property Name="products_shippingtime" Type="Int32" Nullable="false" />
+          <Property Name="products_model" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="group_ids" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="products_sort" Type="Int32" />
+          <Property Name="products_image" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="products_price" Type="Decimal" Nullable="false" />
+          <Property Name="products_discount_allowed" Type="Decimal" Nullable="false" />
+          <Property Name="products_date_added" Type="DateTime" Nullable="false" />
+          <Property Name="products_last_modified" Type="DateTime" />
+          <Property Name="products_date_available" Type="DateTime" />
+          <Property Name="products_weight" Type="Decimal" Nullable="false" />
+          <Property Name="products_status" Type="Boolean" Nullable="false" />
+          <Property Name="products_tax_class_id" Type="Int32" Nullable="false" />
+          <Property Name="product_template" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="options_template" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="manufacturers_id" Type="Int32" />
+          <Property Name="products_ordered" Type="Int32" Nullable="false" />
+          <Property Name="products_fsk18" Type="Int32" Nullable="false" />
+          <Property Name="products_featured" Type="Int32" Nullable="false" />
+          <Property Name="products_stock_code" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="products_storage_spaces" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="products_transport" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="products_country" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="epass_price" Type="Decimal" />
+        </EntityType>
+        <EntityType Name="products_description">
+          <Key>
+            <PropertyRef Name="products_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="products_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="products_name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="products_description1" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="products_short_description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="products_meta_title" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="products_meta_description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="products_meta_keywords" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="products_url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="products_viewed" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="icshopc_icshopcEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="products" EntityType="Self.products" />
+          <EntitySet Name="products_description" EntityType="Self.products_description" />
+          <EntitySet Name="categories_description" EntityType="icshopc_icshopcModel.categories_description" />
+          <EntitySet Name="products_to_categories" EntityType="icshopc_icshopcModel.products_to_categories" />
+          <EntitySet Name="shipping_status" EntityType="icshopc_icshopcModel.shipping_status" />
+          <EntitySet Name="categories" EntityType="icshopc_icshopcModel.categories" />
+        </EntityContainer>
+        <EntityType Name="categories_description">
+          <Key>
+            <PropertyRef Name="categories_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="categories_id" Type="Int32" Nullable="false" />
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="categories_name" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="categories_heading_title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="categories_description1" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="categories_meta_title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="categories_meta_description" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="categories_meta_keywords" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="products_to_categories">
+          <Key>
+            <PropertyRef Name="products_id" />
+            <PropertyRef Name="categories_id" />
+          </Key>
+          <Property Name="products_id" Type="Int32" Nullable="false" />
+          <Property Name="categories_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="shipping_status">
+          <Key>
+            <PropertyRef Name="shipping_status_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="shipping_status_id" Type="Int32" Nullable="false" />
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="shipping_status_name" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="shipping_status_image" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="categories">
+          <Key>
+            <PropertyRef Name="categories_id" />
+          </Key>
+          <Property Name="categories_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categories_image" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="parent_id" Type="Int32" Nullable="false" />
+          <Property Name="categories_status" Type="Boolean" Nullable="false" />
+          <Property Name="categories_template" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="group_ids" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="listing_template" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="sort_order" Type="Int32" />
+          <Property Name="products_sorting" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="products_sorting2" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="date_added" Type="DateTime" />
+          <Property Name="last_modified" Type="DateTime" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="icshopc_icshopcModelStoreContainer" CdmEntityContainer="icshopc_icshopcEntities">
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="icshopc_icshopcModel.products">
+              <MappingFragment StoreEntitySet="products">
+                <ScalarProperty Name="products_id" ColumnName="products_id" />
+                <ScalarProperty Name="products_quantity" ColumnName="products_quantity" />
+                <ScalarProperty Name="products_shippingtime" ColumnName="products_shippingtime" />
+                <ScalarProperty Name="products_model" ColumnName="products_model" />
+                <ScalarProperty Name="group_ids" ColumnName="group_ids" />
+                <ScalarProperty Name="products_sort" ColumnName="products_sort" />
+                <ScalarProperty Name="products_image" ColumnName="products_image" />
+                <ScalarProperty Name="products_price" ColumnName="products_price" />
+                <ScalarProperty Name="products_discount_allowed" ColumnName="products_discount_allowed" />
+                <ScalarProperty Name="products_date_added" ColumnName="products_date_added" />
+                <ScalarProperty Name="products_last_modified" ColumnName="products_last_modified" />
+                <ScalarProperty Name="products_date_available" ColumnName="products_date_available" />
+                <ScalarProperty Name="products_weight" ColumnName="products_weight" />
+                <ScalarProperty Name="products_status" ColumnName="products_status" />
+                <ScalarProperty Name="products_tax_class_id" ColumnName="products_tax_class_id" />
+                <ScalarProperty Name="product_template" ColumnName="product_template" />
+                <ScalarProperty Name="options_template" ColumnName="options_template" />
+                <ScalarProperty Name="manufacturers_id" ColumnName="manufacturers_id" />
+                <ScalarProperty Name="products_ordered" ColumnName="products_ordered" />
+                <ScalarProperty Name="products_fsk18" ColumnName="products_fsk18" />
+                <ScalarProperty Name="products_featured" ColumnName="products_featured" />
+                <ScalarProperty Name="products_stock_code" ColumnName="products_stock_code" />
+                <ScalarProperty Name="products_storage_spaces" ColumnName="products_storage_spaces" />
+                <ScalarProperty Name="products_transport" ColumnName="products_transport" />
+                <ScalarProperty Name="products_country" ColumnName="products_country" />
+                <ScalarProperty Name="epass_price" ColumnName="epass_price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products_description">
+            <EntityTypeMapping TypeName="icshopc_icshopcModel.products_description">
+              <MappingFragment StoreEntitySet="products_description">
+                <ScalarProperty Name="products_id" ColumnName="products_id" />
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="products_name" ColumnName="products_name" />
+                <ScalarProperty Name="products_description1" ColumnName="products_description" />
+                <ScalarProperty Name="products_short_description" ColumnName="products_short_description" />
+                <ScalarProperty Name="products_meta_title" ColumnName="products_meta_title" />
+                <ScalarProperty Name="products_meta_description" ColumnName="products_meta_description" />
+                <ScalarProperty Name="products_meta_keywords" ColumnName="products_meta_keywords" />
+                <ScalarProperty Name="products_url" ColumnName="products_url" />
+                <ScalarProperty Name="products_viewed" ColumnName="products_viewed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categories_description">
+            <EntityTypeMapping TypeName="icshopc_icshopcModel.categories_description">
+              <MappingFragment StoreEntitySet="categories_description">
+                <ScalarProperty Name="categories_meta_keywords" ColumnName="categories_meta_keywords" />
+                <ScalarProperty Name="categories_meta_description" ColumnName="categories_meta_description" />
+                <ScalarProperty Name="categories_meta_title" ColumnName="categories_meta_title" />
+                <ScalarProperty Name="categories_description1" ColumnName="categories_description" />
+                <ScalarProperty Name="categories_heading_title" ColumnName="categories_heading_title" />
+                <ScalarProperty Name="categories_name" ColumnName="categories_name" />
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products_to_categories">
+            <EntityTypeMapping TypeName="icshopc_icshopcModel.products_to_categories">
+              <MappingFragment StoreEntitySet="products_to_categories">
+                <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+                <ScalarProperty Name="products_id" ColumnName="products_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="shipping_status">
+            <EntityTypeMapping TypeName="icshopc_icshopcModel.shipping_status">
+              <MappingFragment StoreEntitySet="shipping_status">
+                <ScalarProperty Name="shipping_status_image" ColumnName="shipping_status_image" />
+                <ScalarProperty Name="shipping_status_name" ColumnName="shipping_status_name" />
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="shipping_status_id" ColumnName="shipping_status_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="icshopc_icshopcModel.categories">
+              <MappingFragment StoreEntitySet="categories">
+                <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+                <ScalarProperty Name="date_added" ColumnName="date_added" />
+                <ScalarProperty Name="products_sorting2" ColumnName="products_sorting2" />
+                <ScalarProperty Name="products_sorting" ColumnName="products_sorting" />
+                <ScalarProperty Name="sort_order" ColumnName="sort_order" />
+                <ScalarProperty Name="listing_template" ColumnName="listing_template" />
+                <ScalarProperty Name="group_ids" ColumnName="group_ids" />
+                <ScalarProperty Name="categories_template" ColumnName="categories_template" />
+                <ScalarProperty Name="categories_status" ColumnName="categories_status" />
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+                <ScalarProperty Name="categories_image" ColumnName="categories_image" />
+                <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

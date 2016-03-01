@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="icshopc_icshopcModel4" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="categories_id" />
+    </Key>
+    <Property Name="categories_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categories_image" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="parent_id" Type="Int32" Nullable="false" />
+    <Property Name="categories_status" Type="Boolean" Nullable="false" />
+    <Property Name="categories_template" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="group_ids" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="listing_template" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="sort_order" Type="Int32" />
+    <Property Name="products_sorting" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="products_sorting2" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" />
+    <Property Name="last_modified" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="categories_description">
+    <Key>
+      <PropertyRef Name="categories_id" />
+      <PropertyRef Name="language_id" />
+    </Key>
+    <Property Name="categories_id" Type="Int32" Nullable="false" />
+    <Property Name="language_id" Type="Int32" Nullable="false" />
+    <Property Name="categories_name" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="categories_heading_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="categories_description1" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="categories_meta_title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="categories_meta_description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="categories_meta_keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="icshopc_icshopcEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categories" EntityType="Self.categories" />
+    <EntitySet Name="categories_description" EntityType="Self.categories_description" />
+  </EntityContainer>
+</Schema>

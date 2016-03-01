@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="icshopc_icshopcModel2.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="categories">
+          <Key>
+            <PropertyRef Name="categories_id" />
+          </Key>
+          <Property Name="categories_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categories_image" Type="varchar" MaxLength="64" />
+          <Property Name="parent_id" Type="int" Nullable="false" />
+          <Property Name="categories_status" Type="bool" Nullable="false" />
+          <Property Name="categories_template" Type="varchar" MaxLength="64" />
+          <Property Name="group_ids" Type="text" />
+          <Property Name="listing_template" Type="varchar" MaxLength="64" />
+          <Property Name="sort_order" Type="int" />
+          <Property Name="products_sorting" Type="varchar" MaxLength="32" />
+          <Property Name="products_sorting2" Type="varchar" MaxLength="32" />
+          <Property Name="date_added" Type="datetime" Precision="0" />
+          <Property Name="last_modified" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="categories_description">
+          <Key>
+            <PropertyRef Name="categories_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="categories_id" Type="int" Nullable="false" />
+          <Property Name="language_id" Type="int" Nullable="false" />
+          <Property Name="categories_name" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="categories_heading_title" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="categories_description" Type="text" Nullable="false" />
+          <Property Name="categories_meta_title" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="categories_meta_description" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="categories_meta_keywords" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="icshopc_icshopcModel2StoreContainer">
+          <EntitySet Name="categories" EntityType="Self.categories" Schema="icshopc_icshopc" store:Type="Tables" />
+          <EntitySet Name="categories_description" EntityType="Self.categories_description" Schema="icshopc_icshopc" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="icshopc_icshopcModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="categories">
+          <Key>
+            <PropertyRef Name="categories_id" />
+          </Key>
+          <Property Name="categories_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categories_image" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="parent_id" Type="Int32" Nullable="false" />
+          <Property Name="categories_status" Type="Boolean" Nullable="false" />
+          <Property Name="categories_template" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="group_ids" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="listing_template" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="sort_order" Type="Int32" />
+          <Property Name="products_sorting" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="products_sorting2" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="date_added" Type="DateTime" />
+          <Property Name="last_modified" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="categories_description">
+          <Key>
+            <PropertyRef Name="categories_id" />
+            <PropertyRef Name="language_id" />
+          </Key>
+          <Property Name="categories_id" Type="Int32" Nullable="false" />
+          <Property Name="language_id" Type="Int32" Nullable="false" />
+          <Property Name="categories_name" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="categories_heading_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="categories_description1" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="categories_meta_title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="categories_meta_description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="categories_meta_keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="icshopc_icshopcEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="categories" EntityType="Self.categories" />
+          <EntitySet Name="categories_description" EntityType="Self.categories_description" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="icshopc_icshopcModel2StoreContainer" CdmEntityContainer="icshopc_icshopcEntities2">
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="icshopc_icshopcModel2.categories">
+              <MappingFragment StoreEntitySet="categories">
+                <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+                <ScalarProperty Name="categories_image" ColumnName="categories_image" />
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+                <ScalarProperty Name="categories_status" ColumnName="categories_status" />
+                <ScalarProperty Name="categories_template" ColumnName="categories_template" />
+                <ScalarProperty Name="group_ids" ColumnName="group_ids" />
+                <ScalarProperty Name="listing_template" ColumnName="listing_template" />
+                <ScalarProperty Name="sort_order" ColumnName="sort_order" />
+                <ScalarProperty Name="products_sorting" ColumnName="products_sorting" />
+                <ScalarProperty Name="products_sorting2" ColumnName="products_sorting2" />
+                <ScalarProperty Name="date_added" ColumnName="date_added" />
+                <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categories_description">
+            <EntityTypeMapping TypeName="icshopc_icshopcModel2.categories_description">
+              <MappingFragment StoreEntitySet="categories_description">
+                <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="categories_name" ColumnName="categories_name" />
+                <ScalarProperty Name="categories_heading_title" ColumnName="categories_heading_title" />
+                <ScalarProperty Name="categories_description1" ColumnName="categories_description" />
+                <ScalarProperty Name="categories_meta_title" ColumnName="categories_meta_title" />
+                <ScalarProperty Name="categories_meta_description" ColumnName="categories_meta_description" />
+                <ScalarProperty Name="categories_meta_keywords" ColumnName="categories_meta_keywords" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

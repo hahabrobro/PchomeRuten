@@ -1,0 +1,18 @@
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\bin\Test.dll.config
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\bin\Test.dll
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\bin\Test.pdb
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\bin\EntityFramework.dll
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\bin\EntityFramework.xml
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\bin\zh-Hant\EntityFramework.resources.dll
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\obj\Release\Test.csprojResolveAssemblyReference.cache
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\obj\Release\Test.dll
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\obj\Release\Test.pdb
+C:\Users\Administrator\Downloads\Test\Test\bin\Test.dll.config
+C:\Users\Administrator\Downloads\Test\Test\bin\Test.dll
+C:\Users\Administrator\Downloads\Test\Test\bin\Test.pdb
+C:\Users\Administrator\Downloads\Test\Test\bin\EntityFramework.dll
+C:\Users\Administrator\Downloads\Test\Test\bin\EntityFramework.xml
+C:\Users\Administrator\Downloads\Test\Test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\Administrator\Downloads\Test\Test\obj\Release\Test.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Test\Test\obj\Release\Test.dll
+C:\Users\Administrator\Downloads\Test\Test\obj\Release\Test.pdb

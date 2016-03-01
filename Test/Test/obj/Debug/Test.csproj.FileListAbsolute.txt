@@ -1,0 +1,27 @@
+d:\personal\documents\visual studio 2013\Projects\Test\Test\bin\Test.dll.config
+d:\personal\documents\visual studio 2013\Projects\Test\Test\bin\Test.dll
+d:\personal\documents\visual studio 2013\Projects\Test\Test\bin\Test.pdb
+d:\personal\documents\visual studio 2013\Projects\Test\Test\obj\Debug\Test.dll
+d:\personal\documents\visual studio 2013\Projects\Test\Test\obj\Debug\Test.pdb
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\bin\EntityFramework.dll
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\bin\EntityFramework.xml
+D:\Personal\Documents\Visual Studio 2013\Projects\Test\Test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\Administrator\Downloads\Test\Test\bin\Test.dll.config
+C:\Users\Administrator\Downloads\Test\Test\bin\Test.dll
+C:\Users\Administrator\Downloads\Test\Test\bin\Test.pdb
+C:\Users\Administrator\Downloads\Test\Test\bin\EntityFramework.dll
+C:\Users\Administrator\Downloads\Test\Test\bin\EntityFramework.xml
+C:\Users\Administrator\Downloads\Test\Test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\Administrator\Downloads\Test\Test\obj\Debug\Test.dll
+C:\Users\Administrator\Downloads\Test\Test\obj\Debug\Test.pdb
+C:\Users\Administrator\Downloads\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Test\Test\bin\Test.dll.config
+C:\Users\Administrator\Desktop\Test\Test\bin\Test.dll
+C:\Users\Administrator\Desktop\Test\Test\bin\Test.pdb
+C:\Users\Administrator\Desktop\Test\Test\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\Test\Test\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\Test\Test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\Administrator\Desktop\Test\Test\obj\Debug\Test.dll
+C:\Users\Administrator\Desktop\Test\Test\obj\Debug\Test.pdb
+C:\Users\Administrator\Desktop\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache

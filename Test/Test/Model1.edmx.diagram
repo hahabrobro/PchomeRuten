@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bdb7525fccd6486c8a8234e0eb0b3806" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="icshopc_icshopcModel.products" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="icshopc_icshopcModel.products_description" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="icshopc_icshopcModel.categories_description" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="icshopc_icshopcModel.products_to_categories" Width="1.5" PointX="6.5" PointY="0.75" />
+        <EntityTypeShape EntityType="icshopc_icshopcModel.shipping_status" Width="1.5" PointX="6.5" PointY="2.375" />
+        <EntityTypeShape EntityType="icshopc_icshopcModel.categories" Width="1.5" PointX="8.25" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

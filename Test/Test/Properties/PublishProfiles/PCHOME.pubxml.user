@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案是由您 Web 專案的發行/封裝處理程序所使用。您可以編輯此 MSBuild 檔案，
+以自訂此處理程序的行為。若要深入了解，請造訪 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\PCHOME</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/10/2015 16:20:32</publishTime>
+    </File>
+    <File Include="bin/Test.dll">
+      <publishTime>08/19/2015 18:08:55</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/EntityFramework.resources.dll">
+      <publishTime>08/10/2015 16:20:39</publishTime>
+    </File>
+    <File Include="Model1.edmx.diagram">
+      <publishTime>08/13/2015 11:11:37</publishTime>
+    </File>
+    <File Include="Model2.edmx.diagram">
+      <publishTime>08/13/2015 13:54:50</publishTime>
+    </File>
+    <File Include="Model3.edmx.diagram">
+      <publishTime>08/13/2015 13:55:35</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/10/2015 16:20:39</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/19/2015 14:38:50</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>08/12/2015 14:19:41</publishTime>
+    </File>
+    <File Include="WebForm2.aspx">
+      <publishTime>08/14/2015 11:45:45</publishTime>
+    </File>
+    <File Include="WebForm3.aspx">
+      <publishTime>08/19/2015 11:17:16</publishTime>
+    </File>
+    <File Include="WebForm4.aspx">
+      <publishTime>08/19/2015 11:59:29</publishTime>
+    </File>
+    <File Include="WebForm5.aspx">
+      <publishTime>08/19/2015 15:54:34</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="icshopc_icshopcModel4StoreContainer" CdmEntityContainer="icshopc_icshopcEntities4">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="icshopc_icshopcModel4.categories">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+          <ScalarProperty Name="categories_image" ColumnName="categories_image" />
+          <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+          <ScalarProperty Name="categories_status" ColumnName="categories_status" />
+          <ScalarProperty Name="categories_template" ColumnName="categories_template" />
+          <ScalarProperty Name="group_ids" ColumnName="group_ids" />
+          <ScalarProperty Name="listing_template" ColumnName="listing_template" />
+          <ScalarProperty Name="sort_order" ColumnName="sort_order" />
+          <ScalarProperty Name="products_sorting" ColumnName="products_sorting" />
+          <ScalarProperty Name="products_sorting2" ColumnName="products_sorting2" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories_description">
+      <EntityTypeMapping TypeName="icshopc_icshopcModel4.categories_description">
+        <MappingFragment StoreEntitySet="categories_description">
+          <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+          <ScalarProperty Name="categories_name" ColumnName="categories_name" />
+          <ScalarProperty Name="categories_heading_title" ColumnName="categories_heading_title" />
+          <ScalarProperty Name="categories_description1" ColumnName="categories_description" />
+          <ScalarProperty Name="categories_meta_title" ColumnName="categories_meta_title" />
+          <ScalarProperty Name="categories_meta_description" ColumnName="categories_meta_description" />
+          <ScalarProperty Name="categories_meta_keywords" ColumnName="categories_meta_keywords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
